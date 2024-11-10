@@ -1,7 +1,5 @@
-# Sudoku-Grid-Solver
-Projet mi-semestre M1 Informatique - Software Engineering
-
-
+# Sudoku-Grid-Solver  
+Projet mi-semestre M1 Informatique - Software Engineering  
 
 ## Guide d'exécution du solveur de Sudoku
 
@@ -21,7 +19,7 @@ Pour fournir une grille à résoudre, vous devez créer un fichier texte contena
 - Les chiffres d’une ligne sont séparés par des virgules, et chaque ligne doit contenir exactement 9 chiffres.
 - Utilisez le chiffre `0` pour représenter une case vide.
 
-Nous avons 4 grilles dans le GitHub qui sont au bon format et qui permettent de tester les différentes difficultés demandées.
+Nous avons 4 grilles dans le GitHub qui sont au bon format et qui permettent de tester les différentes difficultés demandées si besoin.
 
 **Exemple du format de grille attendue dans le fichier .txt** :
 ```
@@ -36,11 +34,11 @@ Nous avons 4 grilles dans le GitHub qui sont au bon format et qui permettent de 
 0,0,0,0,8,0,0,7,9
 ```
 
-Lors de l'exécution, le programme demandera le chemin du fichier contenant la grille de Sudoku. Une fois que vous avez entré le chemin, si il est reconnue et que la grille est au bon format, le solveur se lance directement.
+Lors de l'exécution, le programme demandera le chemin du fichier contenant la grille de Sudoku. Une fois que vous avez entré le chemin, s'il est reconnu et que la grille est au bon format, le solveur se lance directement.
 
 #### 4. Comportement du solveur et affichage des résultats
 Le solveur suit une logique d'affichage selon le déroulement de la résolution :
-En premier il affiche la grille initiale, puis à la suite il affiche pour toutes les valeurs remplies la règle de déduction qui à servi (DR1, DR2 ou DR3).
+En premier, il affiche la grille initiale, puis à la suite il affiche pour toutes les valeurs remplies la règle de déduction qui a servi (DR1, DR2 ou DR3).
 - **Si le solveur arrive à tout résoudre automatiquement** :
   - Il affichera la grille complète résolue.
   - Il indiquera également le niveau de difficulté estimé de la grille (Facile, Moyen, Difficile ou Très Difficile) en fonction des règles appliquées pour la résoudre.
@@ -50,12 +48,11 @@ En premier il affiche la grille initiale, puis à la suite il affiche pour toute
   - La grille partiellement remplie sera affichée pour que l'utilisateur puisse visualiser l'état actuel.
 
 #### 5. Interaction avec l’utilisateur en cas de blocage
-Dans le cas où le solver bloque :
+Dans le cas où le solveur bloque :
 
 - **Saisie de la ligne et de la colonne** : Le solveur demandera à l'utilisateur d'entrer le numéro de la ligne (de 0 à 8) et le numéro de la colonne (de 0 à 8) où l'utilisateur souhaite remplir une valeur.
 - **Saisie de la valeur** : L'utilisateur entre ensuite une valeur (de 1 à 9) pour cette case.
-- **Validation** : Le solveur vérifiera si la valeur saisie respecte les règles du Sudoku (pas de doublons dans la ligne, la colonne ou le bloc 3x3). Si la valeur est valide, elle sera ajoutée à la grille ; sinon, l’utilisateur devra entrer une autre valeur. Il arrive que la valeur ne s’affiche pas directement après sa saisie, dans ce cas le solver va redemander 
-Parfois la grille ne se met pas à jour directement après la saisie de la valeur, il va demander à nouveau un chiffre pour choisir la ligne de la prochaine valeur, il suffit de rentrer un chiffre puis la grille se mettra à jour. 
-Après chaque saisie, le solveur tentera de réappliquer les règles de déduction pour progresser automatiquement autant que possible. Le processus se répète jusqu’à ce que la grille soit entièrement remplie.
-Une fois la grille complétée, le solveur affichera la grille finale ainsi que le niveau de difficulté.
-Lorsque l’utilisateur rempli certaines valeurs, il se peut que même si elle répondent aux contraintes du sudoku on se retrouve bloqué à la fin sans solution. Dans ce cas bien sur le solver ne pourra rien faire étant qu’il n’y a pas de backtracking.
+- **Validation** : Le solveur vérifiera si la valeur saisie respecte les règles du Sudoku (pas de doublons dans la ligne, la colonne ou le bloc 3x3). Si la valeur est valide, elle sera ajoutée à la grille ; sinon, l’utilisateur devra entrer une autre valeur. Parfois, la grille ne se met pas à jour directement après la saisie de la valeur. Dans ce cas, le solveur va redemander un chiffre pour choisir la ligne de la prochaine valeur ; il suffit alors de rentrer un chiffre puis la grille se mettra à jour.  
+
+Après chaque saisie, le solveur tentera de réappliquer les règles de déduction pour progresser automatiquement autant que possible. Le processus se répète jusqu’à ce que la grille soit entièrement remplie. Une fois la grille complétée, le solveur affichera la grille finale ainsi que le niveau de difficulté.  
+Lorsque l’utilisateur remplit certaines valeurs, il se peut que même si elles répondent aux contraintes du Sudoku, on se retrouve bloqué à la fin sans solution. Dans ce cas, bien sûr, le solveur ne pourra rien faire étant donné qu’il n’y a pas de backtracking.
