@@ -21,6 +21,8 @@ Pour fournir une grille à résoudre, vous devez créer un fichier texte contena
 - Les chiffres d’une ligne sont séparés par des virgules, et chaque ligne doit contenir exactement 9 chiffres.
 - Utilisez le chiffre `0` pour représenter une case vide.
 
+Nous avons 4 grilles dans le GitHub qui sont au bon format et qui permettent de tester les différentes difficultés demandées.
+
 **Exemple du format de grille attendue dans le fichier .txt** :
 ```
 5,3,0,0,7,0,0,0,0
