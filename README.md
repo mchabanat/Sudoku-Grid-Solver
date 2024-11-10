@@ -5,7 +5,7 @@ Projet mi-semestre M1 Informatique - Software Engineering
 
 ## Guide d'exécution du solveur de Sudoku
 
-#### 1. Exécuter le code
+#### 1. Environnement pour exécuter le code
 Pour exécuter le code, lancez le fichier Python contenant le solveur de Sudoku. Assurez-vous d'utiliser un environnement compatible avec Python 3.
 
 #### 2. Ce que le code va faire
